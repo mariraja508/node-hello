@@ -1,12 +1,13 @@
-const http = require('http');
-const port = process.env.PORT || 3000;
+const axios = require('axios');
+const express = require('express');
+const cors = require('cors')
+const app = express();
+const body=require('body-parser')
+const fs = require("fs")
+app.use(body())
+app.use(cors())
+app.post('/', function(req, res) {
+    res.send({name : 'Mariraja'})
+}
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  const msg = 'Hello Node!\n'
-  res.end(msg);
-});
-
-server.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}/`);
-});
+app.listen(5000);
