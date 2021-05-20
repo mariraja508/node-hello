@@ -6,7 +6,7 @@ const body=require('body-parser')
 const fs = require("fs")
 app.use(body())
 app.use(cors())
-app.post('/', function(req, res) {
+app.get('/', function(req, res) {
     res.send({name : 'Mariraja'})
 }
 
