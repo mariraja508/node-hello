@@ -10,4 +10,3 @@ app.get('/', function(req, res) {
     res.send({name : 'Mariraja'})
 }
 
-app.listen(5000);
